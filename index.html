@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    
+</head>
+<body>
+<div class="col-md-12">
+  <div class="container ">
+    <div class="main-text text-center">
+      <h1 class="py-5 text-center"> Bookmarker </h1>
+    </div>
+
+    <div class="dotted-line my-3"></div>
+    <h2 class="py-4 text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+    <div class="mb-3 my-3">
+      <label for="exampleFormControlInput1" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+      <input oninput="validateLinkName()" type="email" class="form-control" id="siteName" placeholder="Bookmark Name">
+      <div class="alert alert-danger my-2 py-1 d-none">Name should start with one capital letter, and two other letters at least.</div>
+    </div>
+    <div class="mb-3 my-5">
+      <label for="exampleFormControlInput1" class="form-label fw-bold"><i class="fa-solid fa-link"></i> Site URL</label>
+      <input oninput="validateurl()" type="email" class="form-control" id="siteURL" placeholder="Website URL">
+      <div class="alert alert-danger my-2 py-1 d-none">Please enter valid URL.</div>
+    </div>
+    <div class="text-center">
+      <div onclick="addLink()" class="btn px-5 py-2 text-white my-4 " style="background-color: #BB4120;">Submit</div>
+    </div>
+    <div class="dotted-line my-4"></div>
+
+    <table class="table my-3 text-center">
+      <thead>
+        <tr>
+          <th scope="col">index</th>
+          <th scope="col">Website Name</th>
+          <th scope="col">Visit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="myRow">
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
